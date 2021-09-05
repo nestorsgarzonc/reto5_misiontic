@@ -23,7 +23,8 @@ public class Reto5JAVA {
             // }
             
             //db.update("DELETE FROM director where nationality = 'colombian'");
-            
+            Director director = new Director();
+            db.update(director.toUpdateSQL(null, "asddas"));
             db.update("UPDATE director SET nationality='chichombiano' where nationality = 'chichombiano :v'");
         } catch (CustomException ex) {
             System.out.println(ex.getMessage());
