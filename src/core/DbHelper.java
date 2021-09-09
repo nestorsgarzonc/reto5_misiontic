@@ -16,7 +16,7 @@ public final class DbHelper {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/misiontisc", "root", "sebastian"
+                    "jdbc:mysql://localhost:3306/misiontic", "root", "sebastian"
             );
             if (conn == null) {
                 throw new CustomException("Error conectando a la DB");
@@ -76,6 +76,7 @@ public final class DbHelper {
                 throw new CustomException("No se pudo crear");
             }
         } catch (SQLException ex) {
+            System.out.println(ex);
             throw new CustomException("Ha ocurrido un error");
         }
     }
